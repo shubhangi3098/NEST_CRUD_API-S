@@ -27,7 +27,8 @@ export class ProductsService {
     async findById(id: string): Promise<Product> {
         //validation for invalid ID entered
         const isValid = mongoose.isValidObjectId(id)
-        if (!isValid) {
+        if (!isValid) 
+        {
             throw new BadRequestException('Please Enter Correct ID.')
         }
  
@@ -77,6 +78,7 @@ export class ProductsService {
       async getProductsSortedByPrice(): Promise<Product[]> {
         return this.productModel.find().sort({ price: 'asc' }).exec();
       }
+      
 
 
 }

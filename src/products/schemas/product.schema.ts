@@ -28,6 +28,3 @@ export class Product{
 
 export const ProductSchema = SchemaFactory.createForClass(Product);
 
-// ProductSchema.statics.findAllByCategory = async function(category: string): Promise<Product[]> {
-//     return this.find({ category: category }).exec();
-// }
